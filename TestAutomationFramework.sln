@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgrammingLesson", "ProgrammingLesson\ProgrammingLesson.csproj", "{F1C140CF-164F-4299-9193-384D99AFAAFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseManagementUITestAutomation", "CourseManagementUITestAutomation\CourseManagementUITestAutomation.csproj", "{90E3DF9F-DF9A-4676-A62E-44F44F7F47BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagementAPITestAutomation", "TaskManagementAPITestAutomation\TaskManagementAPITestAutomation.csproj", "{3FACAC10-68D1-4845-8BF2-A65040EC448A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{F1C140CF-164F-4299-9193-384D99AFAAFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1C140CF-164F-4299-9193-384D99AFAAFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1C140CF-164F-4299-9193-384D99AFAAFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90E3DF9F-DF9A-4676-A62E-44F44F7F47BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90E3DF9F-DF9A-4676-A62E-44F44F7F47BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90E3DF9F-DF9A-4676-A62E-44F44F7F47BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90E3DF9F-DF9A-4676-A62E-44F44F7F47BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FACAC10-68D1-4845-8BF2-A65040EC448A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FACAC10-68D1-4845-8BF2-A65040EC448A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FACAC10-68D1-4845-8BF2-A65040EC448A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FACAC10-68D1-4845-8BF2-A65040EC448A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
