@@ -1,0 +1,7 @@
+﻿A static class can be used as a convenient container for sets of 
+methods that just operate on input parameters and do not have to 
+get or set any internal instance fields. For example, 
+in the .NET Framework Class Library, the static System.Math class 
+contains methods that perform mathematical operations, 
+without any requirement to store or retrieve data that is unique to 
+a particular instance of the Math class. 

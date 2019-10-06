@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,21 +16,21 @@ namespace ProgrammingLesson
             //Class (instance (covered), static)
             //Class (covered), Constructor (covered), Object (covered)
             //Method / Function (void (covered), datatype (return) (covered), argument (covered)/parameter (covered))
-            //Datatypes (string (covered), integer (covered), boolean , var (covered), double (covered) etc)
+            //Datatypes (string (covered), integer (covered), boolean (covered) , var (covered), double (covered) etc)
             //Access modifier (private (covered), public (covered), sealed, protected etc)
-            //String manipulation, String concatenation (covered)
+            //String manipulation (covered), String concatenation (covered)
             //Operators (+ (covered), - (covered), * (covered), / (covered), % (covered))
-            //Comparison operators (== (covered), <=, >= (covered), !=, &&, || etc)
-            //Control statements (Selection and Iteration)
-            //Selection statements (if (covered), switch-case)
-            //Iteration statements (for, while, foreach (covered))
-            //Collections (List (covered), Dictionary, Array (covered), ArrayList)
+            //Comparison operators (== (covered), <= (covered), >= (covered), != (covered), && (covered), || (covered) etc)
+            //Control statements (Selection and Iteration (covered))
+            //Selection statements (if (covered), switch-case (covered))
+            //Iteration statements (for (covered), while (covered), foreach (covered))
+            //Collections (List (covered), Dictionary (covered), Array (covered), ArrayList (covered))
             //Object Oriented Programming Concepts <OOP> 
             //OOP (Encapsulation, Polymorphism, Inheritance, Abstraction)
-            //Read and write of data to a file (Notepad) and SQL Server Database
+            //Read and write of data to a file (Notepad) (covered) and SQL Server Database
             //Debugging (covered)
             //Try-catch (error or exception handling) (covered)
-            //Code refactoring
+            //Code refactoring (covered)
 
             ////Explanation 
             //int age = 55;  //int = datatype, age = variable, 55 = value or data
@@ -315,7 +317,7 @@ namespace ProgrammingLesson
             //    Console.WriteLine(name);
             //}
             //Console.WriteLine();
-            ////provide few student names to the list
+            ////provide few student names to the list            
             //names.Add("Becky");
             //names.Add("Ranti");
             //names.Add("Sandra");
@@ -344,6 +346,211 @@ namespace ProgrammingLesson
             //    Console.WriteLine(name);
             //}
             //Console.WriteLine();
+
+            ////Task 20
+            ////ArrayList, as a collection, can be used to manage a group of data with 
+            ////different datatypes. For example, Arraylist allows int, string, boolean,
+            ////doulbe etc on the list. This is not possible with a List.
+            //ArrayList dataCollection = new ArrayList() { "Becky", 56, false, 34.23 };
+            //foreach (var data in dataCollection)
+            //{
+            //    Console.WriteLine(data);
+            //}
+
+            ////How to get datatype out of a variable
+            //string name = "Joy";
+            //int age = 30;
+            //double value = 34.23;
+            //bool maleGender = true;
+
+            //Console.WriteLine(name.GetType().ToString());
+            //Console.WriteLine(age.GetType().ToString());
+            //Console.WriteLine(value.GetType().ToString());
+            //Console.WriteLine(maleGender.GetType().ToString());
+
+            ////Task 21
+            ////ArrayList task to do. Print to the console only boolean in the collection
+            //ArrayList dataCollection = new ArrayList() { "Becky", 56, false, 34.23, true, false, 4 };
+            //foreach (var data in dataCollection)
+            //{
+            //    if (data.GetType().ToString().Contains("Boolean"))
+            //    {
+            //        Console.WriteLine(data);
+            //    }                
+            //}
+
+            ////Task 22
+            ////Code refactoring
+            ////First way of implementing a list and write the data on the list to the console
+            //List<string> names = new List<string>() { "Becky", "Ranti", "Sandra", "Enitan", "Theresa" };            
+            //foreach (var name in names)
+            //{
+            //    Console.WriteLine(name);
+            //}
+
+            //Console.WriteLine();
+            ////Another way of implementing above code
+            //new List<string>() { "Paul", "Ted", "Rooney", "Brandon", "Lola" }.ForEach(name => Console.WriteLine(name));
+
+            //Console.WriteLine();
+            ////Another way to implement the same code
+            //List<string> studentNames = new List<string>() { "Balotelli", "Stone", "JayJay", "Raymond", "Sola" };
+            //studentNames.ForEach(name => Console.WriteLine(name));
+
+            ////Task 23
+            ////Dictionary, as a collection, can be used to manage data with Key and Value.
+            ////A Dictionary class is a data structure that represents a collection of keys and values pair of data
+            ////Key  = Family
+            ////Value = a group of one or more parents and their children living together as a unit
+            ////Write a computer program to capture student names and their marks. 
+            ////Display to the console all capture students along with their marks
+            //Dictionary<string, int> studentMarks = new Dictionary<string, int>();
+            //studentMarks.Add("Sandra", 70);
+            //studentMarks.Add("Wonishi", 73);
+            //studentMarks.Add("Howard", 68);
+            //studentMarks.Add("Tesler", 37);
+            //foreach (var studentMark in studentMarks)
+            //{
+            //    Console.WriteLine("Student " + studentMark.Key + " has a mark of " + studentMark.Value);
+            //}
+
+            ////Task 24
+            ////Dictionary, as a collection, can be used to manage data with Key and Value.            
+            ////Write a computer program to capture student names and their marks. 
+            ////Display to the console only students with marks 70 and above
+            //Dictionary<string, int> studentMarks = new Dictionary<string, int>();
+            //studentMarks.Add("Sandra", 70);
+            //studentMarks.Add("Wonishi", 73);
+            //studentMarks.Add("Howard", 68);
+            //studentMarks.Add("Tesler", 37);
+            //studentMarks.Add("Becky", 71);
+            //foreach (var studentMark in studentMarks)
+            //{
+            //    if (studentMark.Value >= 70)
+            //    {
+            //        Console.WriteLine("Student " + studentMark.Key + " has a mark of " + studentMark.Value);
+            //    }                
+            //}
+
+            ////Task 25
+            ////Dictionary, as a collection, can be used to manage data with Key and Value.            
+            ////Write a computer program to capture student names and their marks. 
+            ////Display to the console only students with marks between 40 and 70
+            //Dictionary<string, int> studentMarks = new Dictionary<string, int>();
+            //studentMarks.Add("Sandra", 70);
+            //studentMarks.Add("Wonishi", 73);
+            //studentMarks.Add("Howard", 68);
+            //studentMarks.Add("Tesler", 37);
+            //studentMarks.Add("Becky", 71);
+            //studentMarks.Add("Richard", 40);
+            //foreach (var studentMark in studentMarks)
+            //{
+            //    if (studentMark.Value >= 40 && studentMark.Value <= 70)  //|| OR-statement, && AND-statement
+            //    {
+            //        Console.WriteLine("Student " + studentMark.Key + " has a mark of " + studentMark.Value);
+            //    }
+            //}
+
+            ////Task 26
+            ////For-statement implementation
+            ////Write a computer program to generate numbers between 1 and 20 to the console
+            //for (int i = 1; i <= 20; i++)  //i++ means incremental
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            ////Task 27
+            ////For-statement implementation
+            ////Write a computer program to generate numbers between 1 and 20. Only print
+            ////to the console all even number
+            //for (int number = 1; number <= 20; number++)  //i++ means incremental
+            //{
+            //    if (number % 2 == 0)
+            //    {
+            //        Console.WriteLine(number);
+            //    }                
+            //}
+
+            ////Task 28
+            ////While-statement implementation
+            ////This can be used to loop through a set of data so as to meet a certain 
+            ////condition. It is an option to for-statement
+            ////Write a computer program to print "Happy Birthday" 10 times 
+            ////Below is an option of using for-statement to answer above question
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    Console.WriteLine(i + " Happy Birthday" );
+            //}
+            ////Below is an option of using while-statement to answer above question
+            //Console.WriteLine();
+            //int counter = 1;
+            //while (counter <= 10)
+            //{
+            //    Console.WriteLine(counter + " Happy Birthday");
+            //    counter++;  //this is an incremental that will add 1 to the current each time
+            //}
+
+            ////Task 29
+            ////Switch-case implementation
+            ////This is also an option to an if-statement
+            ////Write a computer program to allow a user to input a browser name so as to 
+            ////decide a browser to use for test execution
+            //Console.WriteLine("Input a browser name e.g. IE, Chrome, Firefox");
+            //string browser = Console.ReadLine().ToLower();
+            //switch (browser)
+            //{
+            //    case "ie":
+            //        Console.WriteLine("Use IE browser for test execution");
+            //        break;
+            //    case "chrome":
+            //        Console.WriteLine("Use Chrome browser for test execution");
+            //        break;
+            //    case "firefox":
+            //        Console.WriteLine("Use Firefox browser for test execution");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Use Safari browser for test execution");
+            //        break;
+            //}
+
+            ////Task 30
+            ////Static class is a class type that won't allow you to create its object
+            ////As oppose to an instance class which allows object creation
+            //FirstClass firstClassObj = new FirstClass();  //this is an instance class
+            //int age = Class1.age;  //Class1 is a static class which is why we are calling it directly
+            //string name = Class1.name;
+            //Class1.StudentDetails();
+
+            //Task 31
+            //Concept class level and method level variables
+            //Create a new class 'Class2' to demonstrate it
+
+            ////Task 32
+            ////Concept of String manipulation in C sharp
+            ////Write a computer program to allow a user to input a string value and assign 
+            ////it to a variable 
+            ////Use the declared variable for different things that is possible 
+            ////while manipulating strings
+            //Console.WriteLine("Input a text and press enter");
+            //string text = Console.ReadLine();
+            //Console.WriteLine(text.Contains("Lon")); //this gives back true/false
+            //Console.WriteLine(text.Length); //this gives back the number of characters in the text
+            //string textTake = text.Take(5).ToString();
+            //Console.WriteLine(textTake); //this gives back the first 5 characters from the text
+            //string textSkip = text.Skip(5).ToString();
+            //Console.WriteLine(textSkip); //this skips the first 5 letters and write the remaining letters
+            //string nextText = text.Clone().ToString();
+            //Console.WriteLine(nextText);
+
+            ////Task 33
+            ////Read data from a Text (Notepad) file
+            ////Write a computer program to read data from a text file to the console
+            //Console.WriteLine(File.ReadAllText(@"DataReading.txt"));
+
+            ////Task  34
+            ////Write data to a Text file
+            //File.WriteAllText(@"DataWriting.txt", File.ReadAllText(@"DataReading.txt"));
+
         }
 
         static void FirstMethod()
