@@ -49,6 +49,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SecondClass.cs" />
+    <Compile Include="StudentModel.cs" />
     <Compile Include="ThirdClass.cs" />
   </ItemGroup>
   <ItemGroup>

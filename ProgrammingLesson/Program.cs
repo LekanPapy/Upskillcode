@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,7 @@ namespace ProgrammingLesson
             //Collections (List (covered), Dictionary (covered), Array (covered), ArrayList (covered))
             //Object Oriented Programming Concepts <OOP> 
             //OOP (Encapsulation, Polymorphism, Inheritance, Abstraction)
-            //Read and write of data to a file (Notepad) (covered) and SQL Server Database
+            //Read and write of data to a file (Notepad) (covered) and SQL Server Database (covered)
             //Debugging (covered)
             //Try-catch (error or exception handling) (covered)
             //Code refactoring (covered)
@@ -551,6 +552,76 @@ namespace ProgrammingLesson
             ////Write data to a Text file
             //File.WriteAllText(@"DataWriting.txt", File.ReadAllText(@"DataReading.txt"));
 
+            ////Task 35
+            ////Write a computer program to fetch data from 'Student' table within 'Test'
+            ////database in SQL Server Management Studio and display those records to the 
+            ////Console. 
+            ////Prerequisites: you must have 'Test' database, 'Student' table
+            ////and atleast 4 records on the 'Student' table
+            //string connectionString = "Data Source=KOLADETIAMI19E6\\SQLEXPRESS;Initial Catalog=Test;Integrated Security=True;MultipleActiveResultSets=True";
+            //List<StudentModel> fetchedRecords = SelectStudentRecords(connectionString);
+            //foreach (var record in fetchedRecords)
+            //{
+            //    Console.WriteLine(record.StudentId + " " + record.FirstName + " " + 
+            //                      record.LastName + " " + record.City);
+            //}
+
+            ////Task 36
+            ////Write a computer program to populate data to 'Student' table within 'Test'
+            ////database in SQL Server Management Studio.
+            ////Prerequisites: you must have 'Test' database, 'Student' table
+            ////and atleast 4 records on the 'Student' table
+            ////To verify that you have populated a table as expected, you can execute lines 
+            ////of code in Task 35 or goto SQL Server database system to execute a select 
+            ////statement on the 'Test' database
+            //string connectionString = "Data Source=KOLADETIAMI19E6\\SQLEXPRESS;Initial Catalog=Test;Integrated Security=True;MultipleActiveResultSets=True";
+            //PopulateStudentTable(connectionString);
+
+            //Task 37
+            //Concept of Object Oriented Programming (OOP)
+
+
+        }
+
+        static void PopulateStudentTable(string connectionString)
+        {
+            string query = @"insert into Student(FirstName, LastName, City)
+                             values('Olayinka', 'Lisa', 'London')";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        static List<StudentModel> SelectStudentRecords(string connectionString)
+        {
+            List<StudentModel> studentRecords = new List<StudentModel>();
+            string sqlQuery = "Select * from Student";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(sqlQuery, connection);
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        StudentModel record = new StudentModel();
+                        record.StudentId = reader["StudentId"].ToString();
+                        record.FirstName = reader["FirstName"].ToString();
+                        record.LastName = reader["LastName"].ToString();
+                        record.City = reader["City"].ToString();
+                        studentRecords.Add(record);
+                    }
+                    connection.Close();
+                }
+            }
+            return studentRecords;
         }
 
         static void FirstMethod()
