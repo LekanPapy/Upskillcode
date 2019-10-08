@@ -14,11 +14,11 @@ namespace ProgrammingLesson
         static void Main(string[] args) //an entry point
         {
             //Must learn C-sharp keywords / syntax are
-            //Class (instance (covered), static)
+            //Class (instance (covered), static (covered))
             //Class (covered), Constructor (covered), Object (covered)
             //Method / Function (void (covered), datatype (return) (covered), argument (covered)/parameter (covered))
             //Datatypes (string (covered), integer (covered), boolean (covered) , var (covered), double (covered) etc)
-            //Access modifier (private (covered), public (covered), sealed, protected etc)
+            //Access modifier (private (covered), public (covered), sealed (covered), protected etc)
             //String manipulation (covered), String concatenation (covered)
             //Operators (+ (covered), - (covered), * (covered), / (covered), % (covered))
             //Comparison operators (== (covered), <= (covered), >= (covered), != (covered), && (covered), || (covered) etc)
@@ -27,7 +27,7 @@ namespace ProgrammingLesson
             //Iteration statements (for (covered), while (covered), foreach (covered))
             //Collections (List (covered), Dictionary (covered), Array (covered), ArrayList (covered))
             //Object Oriented Programming Concepts <OOP> 
-            //OOP (Encapsulation, Polymorphism, Inheritance, Abstraction)
+            //OOP (Encapsulation (covered), Polymorphism (covered), Inheritance (covered), Abstraction (covered))
             //Read and write of data to a file (Notepad) (covered) and SQL Server Database (covered)
             //Debugging (covered)
             //Try-catch (error or exception handling) (covered)
@@ -577,9 +577,59 @@ namespace ProgrammingLesson
             //string connectionString = "Data Source=KOLADETIAMI19E6\\SQLEXPRESS;Initial Catalog=Test;Integrated Security=True;MultipleActiveResultSets=True";
             //PopulateStudentTable(connectionString);
 
-            //Task 37
-            //Concept of Object Oriented Programming (OOP)
+            ////Task 37
+            ////Concept of Object Oriented Programming (OOP)
+            ////Inheritance as part of OOP
+            ////Write a computer program to create three classes ('Person', 'Tutor' and 
+            ////'Student') such that:
+            ////'Person' class has attributes 'firstName', 'lastName', 'age' and 'address' 
+            ////'Tutor' class has an attribute 'role' and;
+            ////'Student' class has an attribute 'position'
+            ////Allow both 'Tutor' and 'Student' classes to inherit 'Person' class
+            ////Create objects of both 'Tutor' and 'Student' classes and call their functions
+            //
+            //Tutor tutorObj = new Tutor();
+            //tutorObj.PersonalDetails();
+            //tutorObj.Responsibility();
+            //
+            //Console.WriteLine();
+            //Student studentObj = new Student();
+            //studentObj.PersonalDetails();
+            //studentObj.StudentPosition();
 
+
+            ////Task 38
+            ////Polymorphism as part OOP
+            ////This is divided into 'Overloading' and 'Overriden'.They are both related to methods
+            ////Overloading is a concept of having more than one methods with the same name
+            ////but different signatures (parameters).
+            ////Write a computer program to create a new class called 'Test' such that 
+            ////it has 3 methods with the same name but different parameters or signatures.
+            ////Allow each method to do addition of two, three and four numbers respectively
+            ////Create an object of the class, call each method and provide the right 
+            ////number of arguments
+            //Test testObj = new Test();
+            //testObj.Addition(3, 4, 5);   //this should give us 12
+            //testObj.Addition(3, 4);     //this should give us 7
+            //testObj.Addition(3, 4, 5, 6);    //this should give us 18       
+
+            ////Task 39
+            ////Concept of method Overriden
+            ////Overriden is a concept of having two classes such that
+            ////one class (a subclass) inherits properties of another class (superclass)
+            ////both classes have atleast one method each with the same name
+            ////Before this can be allowed in C#, a method in the superclass must 
+            ////have a keyword 'virtual' while a method in the 'subclass' must have a
+            ////keyword 'override'
+            ////For example create one additional method each in both 'Person' and 'Tutor'
+            ////classes to demonstrate this concept
+            ////Create objects of both 'Person' and 'Tutor' class and reference 
+            ////the method they have in common
+            //Person personObj = new Person();
+            //personObj.Bonus();
+
+            //Tutor tutorObj = new Tutor();
+            //tutorObj.Bonus();
 
         }
 
