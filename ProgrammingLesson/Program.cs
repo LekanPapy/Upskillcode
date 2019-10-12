@@ -526,14 +526,14 @@ namespace ProgrammingLesson
             //Concept class level and method level variables
             //Create a new class 'Class2' to demonstrate it
 
-            ////Task 32
-            ////Concept of String manipulation in C sharp
-            ////Write a computer program to allow a user to input a string value and assign 
-            ////it to a variable 
-            ////Use the declared variable for different things that is possible 
-            ////while manipulating strings
-            //Console.WriteLine("Input a text and press enter");
-            //string text = Console.ReadLine();
+            //Task 32
+            //Concept of String manipulation in C sharp
+            //Write a computer program to allow a user to input a string value and assign 
+            //it to a variable 
+            //Use the declared variable for different things that is possible 
+            //while manipulating strings
+            Console.WriteLine("Input a text and press enter");
+            string text = Console.ReadLine();
             //Console.WriteLine(text.Contains("Lon")); //this gives back true/false
             //Console.WriteLine(text.Length); //this gives back the number of characters in the text
             //string textTake = text.Take(5).ToString();
@@ -542,6 +542,9 @@ namespace ProgrammingLesson
             //Console.WriteLine(textSkip); //this skips the first 5 letters and write the remaining letters
             //string nextText = text.Clone().ToString();
             //Console.WriteLine(nextText);
+            ////use substring to take characters out of a text
+            ////Console.WriteLine(text.Substring(0, 5));
+            ////Console.WriteLine(text.Remove(0, 5));
 
             ////Task 33
             ////Read data from a Text (Notepad) file
