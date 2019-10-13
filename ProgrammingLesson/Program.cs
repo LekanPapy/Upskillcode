@@ -569,16 +569,16 @@ namespace ProgrammingLesson
             //                      record.LastName + " " + record.City);
             //}
 
-            ////Task 36
-            ////Write a computer program to populate data to 'Student' table within 'Test'
-            ////database in SQL Server Management Studio.
-            ////Prerequisites: you must have 'Test' database, 'Student' table
-            ////and atleast 4 records on the 'Student' table
-            ////To verify that you have populated a table as expected, you can execute lines 
-            ////of code in Task 35 or goto SQL Server database system to execute a select 
-            ////statement on the 'Test' database
-            //string connectionString = "Data Source=KOLADETIAMI19E6\\SQLEXPRESS;Initial Catalog=Test;Integrated Security=True;MultipleActiveResultSets=True";
-            //PopulateStudentTable(connectionString);
+            //Task 36
+            //Write a computer program to populate data to 'Student' table within 'Test'
+            //database in SQL Server Management Studio.
+            //Prerequisites: you must have 'Test' database, 'Student' table
+            //and atleast 4 records on the 'Student' table
+            //To verify that you have populated a table as expected, you can execute lines 
+            //of code in Task 35 or goto SQL Server database system to execute a select 
+            //statement on the 'Test' database
+            string connectionString = "Data Source=KOLADETIAMI19E6\\SQLEXPRESS;Initial Catalog=Test;Integrated Security=True;MultipleActiveResultSets=True";
+            PopulateStudentTable(connectionString);
 
             ////Task 37
             ////Concept of Object Oriented Programming (OOP)

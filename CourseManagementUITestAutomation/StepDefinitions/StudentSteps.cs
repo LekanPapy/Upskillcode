@@ -12,25 +12,20 @@ namespace CourseManagementUITestAutomation.StepDefinitions
 {
     [Binding]
     public class StudentSteps
-    {
-        Context context;
+    {        
         StudentPage studentPage;
+        DatabaseHelper databaseHelper;
 
-        public StudentSteps(Context _context, StudentPage _studentPage)
-        {
-            context = _context;
+        public StudentSteps(StudentPage _studentPage, DatabaseHelper _databaseHelper)
+        {            
             studentPage = _studentPage;
-        }
-
-        [Given(@"that CMS application is loaded")]
-        public void GivenThatCMSApplicationIsLoaded()
-        {
-            context.LoadCMSApplication();
-        }
+            databaseHelper = _databaseHelper;
+        }        
 
         [When(@"a user clicks on Students link")]
         public void WhenAUserClicksOnStudentsLink()
         {
+            //databaseHelper.ClearStudentRecordInPersonTable();
             studentPage.ClickOnStudentLink();
         }
 
@@ -71,12 +66,47 @@ namespace CourseManagementUITestAutomation.StepDefinitions
             string expectedResult = "http://localhost/CourseManagementSystem/students";
             Assert.AreEqual(expectedResult, actualResult);
         }
-
-        [AfterScenario]
-        public void CloseAUT()
+       
+        [When(@"a user fills-in new student record form page with below data")]
+        public void WhenAUserFills_InNewStudentRecordFormPageWithBelowData(Table table)
         {
-            context.ShutDownCMSApplication();
+            ScenarioContext.Current.Pending();
         }
 
+        [When(@"a user fills-in a new student form page with (.*), (.*), (.*) fields")]
+        public void WhenAUserFills_InANewStudentFormPageWithPaulSmithFields(string familyName, string firstName, string enrollmentDate)
+        {
+            ScenarioContext.Current.Pending();
+        }    
+
+        [When(@"a user clicks on Edit link")]
+        public void WhenAUserClicksOnEditLink()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"a user clicks on Save button")]
+        public void WhenAUserClicksOnSaveButton()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"a user clicks on Delete link")]
+        public void WhenAUserClicksOnDeleteLink()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"a user clicks on Delete button on the form page")]
+        public void WhenAUserClicksOnDeleteButtonOnTheFormPage()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"a student record (.*) should not be present")]
+        public void ThenAStudentRecordTedShouldNotBePresent(string familyName)
+        {
+            ScenarioContext.Current.Pending();
+        }
     }
 }
