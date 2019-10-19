@@ -104,15 +104,15 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  testRunner.And("a user clicks on Create New link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
- testRunner.And("a user fills-in FamilyName field with Wayne", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("a user fills-in FamilyName field with WayneTest1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
- testRunner.And("a user fills-in FirstName field with Rooney", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("a user fills-in FirstName field with RooneyTest1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
  testRunner.And("a user fills-in Enrollment Date with 2019/10/10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
  testRunner.And("a user clicks on Create button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
- testRunner.Then("a new student record Wayne should be created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("a new student record WayneTest1 should be created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -140,15 +140,15 @@ this.ScenarioInitialize(scenarioInfo);
                         "FirstName",
                         "EnrollmentDate"});
             table1.AddRow(new string[] {
-                        "Wayne",
-                        "Rooney",
+                        "WayneTest2",
+                        "RooneyTest2",
                         "2019/10/10"});
 #line 23
  testRunner.And("a user fills-in new student record form page with below data", ((string)(null)), table1, "And ");
 #line 26
  testRunner.And("a user clicks on Create button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 27
- testRunner.Then("a new student record Wayne should be created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("a new student record WayneTest2 should be created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -176,62 +176,77 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student_03_Verify that multiple student records can be created: Paul")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student_03_Verify that multiple student records can be created: WayneTest3")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Paul")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "Paul")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "Smith")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "WayneTest3")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "WayneTest3")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "RooneyTest3")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:EnrollmentDate", "2019/10/10")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ExpectedResult", "Paul")]
-        public virtual void Student_03_VerifyThatMultipleStudentRecordsCanBeCreated_Paul()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ExpectedResult", "WayneTest3")]
+        public virtual void Student_03_VerifyThatMultipleStudentRecordsCanBeCreated_WayneTest3()
         {
 #line 30
-this.Student_03_VerifyThatMultipleStudentRecordsCanBeCreated("Paul", "Smith", "2019/10/10", "Paul", ((string[])(null)));
+this.Student_03_VerifyThatMultipleStudentRecordsCanBeCreated("WayneTest3", "RooneyTest3", "2019/10/10", "WayneTest3", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student_03_Verify that multiple student records can be created: Tom")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student_03_Verify that multiple student records can be created: WayneTest4")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Tom")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "Tom")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "Jerry")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "WayneTest4")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "WayneTest4")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "RooneyTest4")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:EnrollmentDate", "2019/10/10")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ExpectedResult", "Tom")]
-        public virtual void Student_03_VerifyThatMultipleStudentRecordsCanBeCreated_Tom()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ExpectedResult", "WayneTest4")]
+        public virtual void Student_03_VerifyThatMultipleStudentRecordsCanBeCreated_WayneTest4()
         {
 #line 30
-this.Student_03_VerifyThatMultipleStudentRecordsCanBeCreated("Tom", "Jerry", "2019/10/10", "Tom", ((string[])(null)));
+this.Student_03_VerifyThatMultipleStudentRecordsCanBeCreated("WayneTest4", "RooneyTest4", "2019/10/10", "WayneTest4", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student_03_Verify that multiple student records can be created: Frank")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student_03_Verify that multiple student records can be created: WayneTest5")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Frank")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "Frank")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "Lampard")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "WayneTest5")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "WayneTest5")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "RooneyTest5")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:EnrollmentDate", "2019/10/10")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ExpectedResult", "Frank")]
-        public virtual void Student_03_VerifyThatMultipleStudentRecordsCanBeCreated_Frank()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ExpectedResult", "WayneTest5")]
+        public virtual void Student_03_VerifyThatMultipleStudentRecordsCanBeCreated_WayneTest5()
         {
 #line 30
-this.Student_03_VerifyThatMultipleStudentRecordsCanBeCreated("Frank", "Lampard", "2019/10/10", "Frank", ((string[])(null)));
+this.Student_03_VerifyThatMultipleStudentRecordsCanBeCreated("WayneTest5", "RooneyTest5", "2019/10/10", "WayneTest5", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student_03_Verify that multiple student records can be created: Joy")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student_03_Verify that multiple student records can be created: WayneTest6")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Joy")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "Joy")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "Lola")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "WayneTest6")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "WayneTest6")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "RooneyTest6")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:EnrollmentDate", "2019/10/10")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ExpectedResult", "Joy")]
-        public virtual void Student_03_VerifyThatMultipleStudentRecordsCanBeCreated_Joy()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ExpectedResult", "WayneTest6")]
+        public virtual void Student_03_VerifyThatMultipleStudentRecordsCanBeCreated_WayneTest6()
         {
 #line 30
-this.Student_03_VerifyThatMultipleStudentRecordsCanBeCreated("Joy", "Lola", "2019/10/10", "Joy", ((string[])(null)));
+this.Student_03_VerifyThatMultipleStudentRecordsCanBeCreated("WayneTest6", "RooneyTest6", "2019/10/10", "WayneTest6", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student_03_Verify that multiple student records can be created: WayneTest7")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "WayneTest7")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "WayneTest7")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "RooneyTest7")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:EnrollmentDate", "2019/10/10")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ExpectedResult", "WayneTest7")]
+        public virtual void Student_03_VerifyThatMultipleStudentRecordsCanBeCreated_WayneTest7()
+        {
+#line 30
+this.Student_03_VerifyThatMultipleStudentRecordsCanBeCreated("WayneTest7", "RooneyTest7", "2019/10/10", "WayneTest7", ((string[])(null)));
 #line hidden
         }
         
@@ -239,70 +254,69 @@ this.Student_03_VerifyThatMultipleStudentRecordsCanBeCreated("Joy", "Lola", "201
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student_04_Verify that a new student record cannot be created with incorrect inpu" +
                     "t data", null, exampleTags);
-#line 44
+#line 45
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 45
- testRunner.Given("that CMS application is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 46
- testRunner.When("a user clicks on Students link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("that CMS application is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 47
- testRunner.And("a user clicks on Create New link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("a user clicks on Students link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 48
- testRunner.And(string.Format("a user fills-in a new student form page with {0}, {1}, {2} fields", familyName, firstName, enrollmentDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("a user clicks on Create New link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 49
- testRunner.And("a user clicks on Create button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("a user fills-in a new student form page with {0}, {1}, {2} fields", familyName, firstName, enrollmentDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 50
- testRunner.Then(string.Format("a new student record {0} should be created", expectedErrorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("a user clicks on Create button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 51
+ testRunner.Then(string.Format("an error message {0} should be displayed", expectedErrorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student_04_Verify that a new student record cannot be created with incorrect inpu" +
-            "t data: Variant 0")]
+            "t data: WayneTest8")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 0")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "Paul")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "WayneTest8")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "WayneTest8")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:EnrollmentDate", "2019/10/10")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ExpectedErrorMessage", "First name is required")]
-        public virtual void Student_04_VerifyThatANewStudentRecordCannotBeCreatedWithIncorrectInputData_Variant0()
+        public virtual void Student_04_VerifyThatANewStudentRecordCannotBeCreatedWithIncorrectInputData_WayneTest8()
         {
-#line 44
-this.Student_04_VerifyThatANewStudentRecordCannotBeCreatedWithIncorrectInputData("Paul", "", "2019/10/10", "First name is required", ((string[])(null)));
+#line 45
+this.Student_04_VerifyThatANewStudentRecordCannotBeCreatedWithIncorrectInputData("WayneTest8", "", "2019/10/10", "First name is required", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student_04_Verify that a new student record cannot be created with incorrect inpu" +
-            "t data: Variant 1")]
+            "t data: ")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "Smith")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "RooneyTest9")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:EnrollmentDate", "2019/10/10")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ExpectedErrorMessage", "Last name is required")]
-        public virtual void Student_04_VerifyThatANewStudentRecordCannotBeCreatedWithIncorrectInputData_Variant1()
+        public virtual void Student_04_VerifyThatANewStudentRecordCannotBeCreatedWithIncorrectInputData_()
         {
-#line 44
-this.Student_04_VerifyThatANewStudentRecordCannotBeCreatedWithIncorrectInputData("", "Smith", "2019/10/10", "Last name is required", ((string[])(null)));
+#line 45
+this.Student_04_VerifyThatANewStudentRecordCannotBeCreatedWithIncorrectInputData("", "RooneyTest9", "2019/10/10", "Last name is required", ((string[])(null)));
 #line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Student_04_Verify that a new student record cannot be created with incorrect inpu" +
-            "t data: Variant 2")]
+            "t data: WayneTest10")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Student")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 2")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "Paul")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "Smith")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "WayneTest10")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FamilyName", "WayneTest10")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:FirstName", "RooneyTest10")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:EnrollmentDate", "")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:ExpectedErrorMessage", "Enrollment date is required")]
-        public virtual void Student_04_VerifyThatANewStudentRecordCannotBeCreatedWithIncorrectInputData_Variant2()
+        public virtual void Student_04_VerifyThatANewStudentRecordCannotBeCreatedWithIncorrectInputData_WayneTest10()
         {
-#line 44
-this.Student_04_VerifyThatANewStudentRecordCannotBeCreatedWithIncorrectInputData("Paul", "Smith", "", "Enrollment date is required", ((string[])(null)));
+#line 45
+this.Student_04_VerifyThatANewStudentRecordCannotBeCreatedWithIncorrectInputData("WayneTest10", "RooneyTest10", "", "Enrollment date is required", ((string[])(null)));
 #line hidden
         }
         
@@ -312,25 +326,25 @@ this.Student_04_VerifyThatANewStudentRecordCannotBeCreatedWithIncorrectInputData
         public virtual void Student_05_VerifyThatAUserCanModifyAnExistingStudentRecord()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student_05_Verify that a user can modify an existing student record", null, ((string[])(null)));
-#line 59
+#line 60
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 60
- testRunner.Given("that CMS application is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 61
- testRunner.When("a user clicks on Students link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("that CMS application is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 62
- testRunner.And("a user clicks on Edit link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("a user clicks on Students link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 63
- testRunner.And("a user fills-in FamilyName field with Wayne", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("a user clicks on Edit link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 64
- testRunner.And("a user fills-in FirstName field with Rooney", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("a user fills-in FamilyName field with WayneTest12", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 65
- testRunner.And("a user fills-in Enrollment Date with 2019/10/10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("a user fills-in FirstName field with RooneyTest12", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 66
- testRunner.And("a user clicks on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("a user fills-in Enrollment Date with 2019/10/10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 67
- testRunner.Then("a new student record Wayne should be created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("a user clicks on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 68
+ testRunner.Then("a new student record WayneTest12 should be created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -341,19 +355,19 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void Student_06_VerifyThatAUserCanDeleteAnExistingStudentRecord()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Student_06_Verify that a user can delete an existing student record", null, ((string[])(null)));
-#line 71
+#line 72
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 72
- testRunner.Given("that CMS application is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 73
- testRunner.When("a user clicks on Students link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("that CMS application is loaded", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 74
- testRunner.And("a user clicks on Delete link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("a user clicks on Students link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 75
- testRunner.And("a user clicks on Delete button on the form page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("a user clicks on Delete link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 76
- testRunner.Then("a student record Ted should not be present", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("a user clicks on Delete button on the form page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 77
+ testRunner.Then("a student record WayneTest11 should not be present", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

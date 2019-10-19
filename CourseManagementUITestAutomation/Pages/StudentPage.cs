@@ -25,11 +25,18 @@ namespace CourseManagementUITestAutomation.Pages
         By firstName = By.Id("FirstName");
         By enrollmentDate = By.Id("EnrollmentDate");
         By studentCreateButton = By.XPath("/html/body/div[2]/form/div/div[5]/div/input");
+        By familyNameErrorMessage = By.XPath("/html/body/div[2]/form/div/div[2]/div/span");
+        By firstNameErrorMessage = By.XPath("/html/body/div[2]/form/div/div[3]/div/span");
+        By enrollmentDateErrorMessage = By.XPath("/html/body/div[2]/form/div/div[4]/div/span");
+        By editLink = By.XPath("/html/body/div[2]/table/tbody/tr[2]/td[4]/a[1]");
+        By saveButton = By.XPath("/html/body/div[2]/form/div/div[4]/div/input");
+        By deleteLink = By.XPath("/html/body/div[2]/table/tbody/tr[2]/td[4]/a[3]");
+        By deleteButton = By.XPath("/html/body/div[2]/div/form/div/input");
 
         public void ClickOnStudentLink()
         {
             Thread.Sleep(2000);
-            context.driver.FindElement(studentLink).Click();
+            context.driver.FindElement(studentLink,30).Click();
         }
 
         public void ClickOnCreateNewLink()
@@ -71,6 +78,49 @@ namespace CourseManagementUITestAutomation.Pages
         public string VerifyStudentRecordCreation()
         {
             return context.driver.Url;
+        }
+
+        public string ReturnFamilyNameErrorMessage()
+        {
+            return context.driver.FindElement(familyNameErrorMessage).Text.Trim();
+        }
+
+        public string ReturnFirstNameErrorMessage()
+        {
+            return context.driver.FindElement(firstNameErrorMessage).Text.Trim();
+        }
+
+        public string ReturnEnrollmentDateErrorMessage()
+        {
+            return context.driver.FindElement(enrollmentDateErrorMessage).Text.Trim();        
+        }
+
+        public void ClickOnEditButton()
+        {
+            context.driver.Navigate().Refresh();
+            Thread.Sleep(1000);
+            context.driver.FindElement(editLink).Click();
+            Thread.Sleep(1000);
+        }
+
+        public void ClickOnSaveButton()
+        {
+            context.driver.FindElement(saveButton).Click();
+            Thread.Sleep(1000);
+        }
+
+        public void ClickOnDeleteLink()
+        {
+            context.driver.Navigate().Refresh();
+            Thread.Sleep(1000);
+            context.driver.FindElement(deleteLink).Click();
+            Thread.Sleep(1000);
+        }
+
+        public void ClickOnDeleteButton()
+        {
+            context.driver.FindElement(deleteButton).Click();
+            Thread.Sleep(1000);
         }
     }
 }
