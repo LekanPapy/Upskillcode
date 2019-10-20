@@ -12,7 +12,7 @@ Scenario: Student_01_Verify that a user can create a new student record
 	And a user fills-in FirstName field with RooneyTest1
 	And a user fills-in Enrollment Date with 2019/10/10
 	And a user clicks on Create button
-	Then a new student record WayneTest1 should be created
+	Then a new student record RooneyTest1 should be created
 
 #This is another way of writing the above test
 #Prerequisite: a student record Wayne Rooney should be deleted

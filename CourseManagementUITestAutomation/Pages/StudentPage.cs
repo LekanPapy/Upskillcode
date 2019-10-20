@@ -32,6 +32,9 @@ namespace CourseManagementUITestAutomation.Pages
         By saveButton = By.XPath("/html/body/div[2]/form/div/div[4]/div/input");
         By deleteLink = By.XPath("/html/body/div[2]/table/tbody/tr[2]/td[4]/a[3]");
         By deleteButton = By.XPath("/html/body/div[2]/div/form/div/input");
+        By studentTable = By.XPath("/html/body/div[2]/table");
+        By tableRow = By.TagName("tr");
+        By tableData = By.TagName("td");
 
         public void ClickOnStudentLink()
         {
@@ -121,6 +124,33 @@ namespace CourseManagementUITestAutomation.Pages
         {
             context.driver.FindElement(deleteButton).Click();
             Thread.Sleep(1000);
+        }
+
+        public bool ActualResultVerification(string expectedResult)
+        {
+            IWebElement table = context.driver.FindElement(studentTable);
+            IEnumerable<IWebElement> rows = table.FindElements(tableRow).Skip(1);
+            bool actualResult = false;
+            bool breakOutOfTheLoop = false;
+
+            foreach (var row in rows)
+            {
+                var rowData = row.FindElements(tableData);
+                foreach (var data in rowData)
+                {
+                    if (data.Text.Trim().Equals(expectedResult))
+                    {
+                        actualResult = true;
+                        breakOutOfTheLoop = true;
+                        break;
+                    }
+                }
+                if (breakOutOfTheLoop)
+                {
+                    break;
+                }
+            }
+            return actualResult;
         }
     }
 }

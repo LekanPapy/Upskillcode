@@ -63,11 +63,13 @@ namespace CourseManagementUITestAutomation.StepDefinitions
         }
 
         [Then(@"a new student record (.*) should be created")]
-        public void ThenANewStudentRecordHakaShouldBeCreated(string familyName)
+        public void ThenANewStudentRecordHakaShouldBeCreated(string expectedResult)
         {
-            string actualResult = studentPage.VerifyStudentRecordCreation();
-            string expectedResult = "http://localhost/CourseManagementSystem/students";
-            Assert.AreEqual(expectedResult, actualResult);
+            //string actualResult = studentPage.VerifyStudentRecordCreation();
+            //string expectedResult = "http://localhost/CourseManagementSystem/students";
+            //Assert.AreEqual(expectedResult, actualResult);
+            bool actualResult = studentPage.ActualResultVerification(expectedResult);
+            Assert.IsTrue(actualResult, $"actual result {actualResult} is not equal to an expected result {expectedResult}");
         }
        
         [When(@"a user fills-in new student record form page with below data")]
@@ -114,9 +116,10 @@ namespace CourseManagementUITestAutomation.StepDefinitions
         }
 
         [Then(@"a student record (.*) should not be present")]
-        public void ThenAStudentRecordTedShouldNotBePresent(string familyName)
+        public void ThenAStudentRecordTedShouldNotBePresent(string expectedResult)
         {
-            Assert.IsTrue(true);  //Fake assertion
+            bool actualResult = studentPage.ActualResultVerification(expectedResult);
+            Assert.IsFalse(actualResult, $"actual result {actualResult} is not equal to an expected result {expectedResult}");
         }
 
         [Then(@"an error message (.*) should be displayed")]
